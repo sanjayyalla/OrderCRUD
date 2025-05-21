@@ -67,9 +67,15 @@ public class Main {
                     controller.cancelOrder(deleteId);
                     break;
                 case 5:
-                    System.out.println("All Order are----------");
-                    List<OrderEntity> allOrders= controller.getAllOrders();
-                    System.out.println(allOrders);
+                    if(!controller.getAllOrders().isEmpty())
+                    {
+                        System.out.println("All Order are----------");
+                        List<OrderEntity> allOrders= controller.getAllOrders();
+                        System.out.println(allOrders);
+                    }else{
+                        System.out.println("No Orders found");
+                    }
+
                     break;
                 case 6:
                     System.exit(0);
