@@ -38,7 +38,7 @@ public class Main {
                     OrderEntity searchedOrder = controller.getOrder(id);
                     if (searchedOrder != null) {
 
-                        System.out.println("Searched Employee : ");
+                        System.out.println("Searched Order : ");
                         System.out.println(searchedOrder);
                     } else {
                         System.out.println("Order not found");
