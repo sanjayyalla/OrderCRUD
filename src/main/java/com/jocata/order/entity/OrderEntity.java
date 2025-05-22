@@ -1,9 +1,12 @@
 package com.jocata.order.entity;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class OrderEntity {
     private int orderId;
     private String customerName;
-    private String orderDate;
+    private LocalDate orderDate;
     private String item;
     private double totalAmount;
     private String status;
@@ -24,11 +27,16 @@ public class OrderEntity {
         this.customerName = customerName;
     }
 
-    public String getOrderDate() {
+    public LocalDate getOrderDate() {
+
         return orderDate;
     }
-
-    public void setOrderDate(String orderDate) {
+    public String getFormattedOrderDate() {
+        if (orderDate == null) return "";
+        DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy");
+        return orderDate.format(outputFormatter);
+    }
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -61,7 +69,7 @@ public class OrderEntity {
         return "OrderEntity{" +
                 "orderId=" + orderId +
                 ", customerName='" + customerName + '\'' +
-                ", orderDate='" + orderDate + '\'' +
+                ", orderDate='" + getFormattedOrderDate() + '\'' +
                 ", item='" + item + '\'' +
                 ", totalAmount=" + totalAmount +
                 ", status='" + status + '\'' +

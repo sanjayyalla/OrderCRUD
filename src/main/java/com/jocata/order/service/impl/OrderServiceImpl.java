@@ -5,6 +5,8 @@ import com.jocata.order.dao.impl.OrderDaoImpl;
 import com.jocata.order.entity.OrderEntity;
 import com.jocata.order.form.OrderDetails;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class OrderServiceImpl implements  OrderService{
@@ -14,7 +16,10 @@ public class OrderServiceImpl implements  OrderService{
         OrderEntity orderEntity = new OrderEntity();
         orderEntity.setOrderId(orderDetails.getOrderId());
         orderEntity.setCustomerName(orderDetails.getCustomerName());
-        orderEntity.setOrderDate(orderDetails.getOrderDate());
+//        orderEntity.setOrderDate(orderDetails.getOrderDate());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate orderDate = LocalDate.parse(orderDetails.getOrderDate(), formatter);
+        orderEntity.setOrderDate(orderDate);
         orderEntity.setTotalAmount(orderDetails.getTotalAmount());
         orderEntity.setItem(orderDetails.getItem());
         orderEntity.setStatus(orderDetails.getStatus());
@@ -26,7 +31,10 @@ public class OrderServiceImpl implements  OrderService{
         OrderEntity orderEntity = new OrderEntity();
         orderEntity.setOrderId(orderDetails.getOrderId());
         orderEntity.setCustomerName(orderDetails.getCustomerName());
-        orderEntity.setOrderDate(orderDetails.getOrderDate());
+//        orderEntity.setOrderDate(orderDetails.getOrderDate());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate orderDate = LocalDate.parse(orderDetails.getOrderDate(), formatter);
+        orderEntity.setOrderDate(orderDate);
         orderEntity.setTotalAmount(orderDetails.getTotalAmount());
         orderEntity.setItem(orderDetails.getItem());
         orderEntity.setStatus(orderDetails.getStatus());

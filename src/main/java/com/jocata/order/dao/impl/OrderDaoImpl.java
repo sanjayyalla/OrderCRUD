@@ -27,7 +27,7 @@ public class OrderDaoImpl implements OrderDao {
             {
                 existing.setCustomerName(orderEntity.getCustomerName());
             }
-            if(orderEntity.getOrderDate()!=null && !orderEntity.getOrderDate().isEmpty())
+            if(orderEntity.getOrderDate()!=null)
             {
                 existing.setOrderDate(orderEntity.getOrderDate());
             }
