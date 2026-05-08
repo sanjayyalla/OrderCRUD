@@ -1,8 +1,8 @@
-package com.jocata.order.main;
+package com.order.order.main;
 
-import com.jocata.order.controller.OrderController;
-import com.jocata.order.entity.OrderEntity;
-import com.jocata.order.form.OrderDetails;
+import com.order.order.controller.OrderController;
+import com.order.order.entity.OrderEntity;
+import com.order.order.form.OrderDetails;
 
 import java.util.List;
 import java.util.Scanner;

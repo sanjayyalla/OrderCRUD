@@ -1,4 +1,4 @@
-package com.jocata.order.form;
+package com.order.order.form;
 
 public class OrderDetails {
     private int orderId;

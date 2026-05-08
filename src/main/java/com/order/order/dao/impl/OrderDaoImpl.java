@@ -1,8 +1,8 @@
-package com.jocata.order.dao.impl;
+package com.order.order.dao.impl;
 
-import com.jocata.order.dao.OrderDao;
-import com.jocata.order.entity.OrderEntity;
-import com.jocata.order.form.OrderDetails;
+import com.order.order.dao.OrderDao;
+import com.order.order.entity.OrderEntity;
+import com.order.order.form.OrderDetails;
 
 import java.util.ArrayList;
 import java.util.HashMap;

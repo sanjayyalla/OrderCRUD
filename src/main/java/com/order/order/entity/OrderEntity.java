@@ -1,4 +1,4 @@
-package com.jocata.order.entity;
+package com.order.order.entity;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
